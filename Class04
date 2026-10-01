@@ -1,1 +1,18 @@
+Job Card 04: Blocks Become Text
 
+Topic: Transitioning from Block-Based Logic (EduBlocks) to Text-Based Python.  
+
+Core Concept: Every visual block directly translates to a specific line of Python code.  
+
+Block-to-Python Syntax Mapping
+
+Scratch / EduBlock Logic.                     Python Syntax Equivalent
+
+Set initial variable (set [count] to 0).                count = 0
+Increment variable (change [count] by 1).               count = count + 1
+Delay / Pause (wait 1 secs).                            time.sleep(1) (requires import time)
+Display Output (say [Hello, World!]).                   print("Hello, World!")
+Fixed Count Loop (repeat (10)).                         for i in range(10):
+Dynamic Input (ask [Size?] and wait).                   size = input("Size?")
+Conditional (if <dia > 25> then)v.                      if dia > 25:
+Infinite Loop (forever).                                while True:
