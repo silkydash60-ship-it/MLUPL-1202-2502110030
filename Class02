@@ -1,1 +1,19 @@
+Job02: Logic You Can Touch
 
+Topic: Sequence, Decision, and Repetition using block-based logic (Scratch).  
+Core Concept: Moving from physical/shop floor operational logic (like automated stamping or inspection) to programming logic.  
+Key Programming Concepts & Python Mapping
+Repetition (Loops):
+Block Logic: Run enclosed blocks N times.  
+Python Future: for i in range(10):  
+Shop Analogy: Stamping 500 blanks using one defined cycle.  
+Decision Making (Conditionals):
+Block Logic: Test a condition and take one of two paths (accept or reject).  
+Python Future: if dia <= limit: ... else:  
+Shop Analogy: Go / No-Go Gauge inspection ("If within tolerance \rightarrow accept bin, else \rightarrow reject bin").  
+Input / Sensing:
+Block Logic: Sensing interaction or key press.  
+Python Future: ask() \rightarrow input().  
+Variables:
+Block Logic: A labeled bin holding a value (counter, score, diameter).  
+Python Future: count = 0.
