@@ -1,1 +1,15 @@
+Job Card 03: Joy of Computing 
 
+Topic: Quality Circle Protocol & Search Algorithms.  
+
+Core Concept: Connecting NPTEL course videos to practical engineering concepts and computational efficiency.  
+
+Key Algorithm Concept: Binary Search (Half-Splitting)
+
+Problem: Finding a faulty station out of 100 transfer line stations.  
+
+Method (Binary Search): Split the remaining search space in half with each yes/no question.  
+
+Efficiency: Takes at most 7 checks to locate 1 faulty station out of 100 (2^7 = 128 \ge 100).  
+
+Engineering Insight: 7 strategic checks beat 100 sequential inspections. Computing principles directly apply to optimizing real shop-floor operations.  
