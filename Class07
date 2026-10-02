@@ -1,1 +1,170 @@
+JOB 7 – Raw Material of Code
+Topic: Data Types, Literals, type(), Keywords and Legal Variable Names
+Job 7 starts the Module I section of Python. It introduces the basic data types used to store different kinds of information.
+The main types covered are:
+Integer (int)
+Float (float)
+String (str)
+Boolean (bool)
+It also introduces literals, keywords and variable naming rules.
+1. What is a Data Type?
+A data type tells Python what kind of value is being stored.
+For example:
+age = 20
+Here 20 is an integer.
+temperature = 25.5
+Here 25.5 is a floating-point number.
+2. Integer – int
+An integer is a whole number without a decimal point.
+Examples:
 
+print(parts)
+print(type(parts))
+Output:
+42
+<class 'int'>
+Production Engineering Example:
+parts_produced = 42
+machines = 3
+Both values are integers.
+3. Float – float
+A float is a number that contains a decimal point.
+Example:
+temperature = 25.0
+print(temperature)
+print(type(temperature))
+Output:
+25.0
+<class 'float'>
+Production Engineering Examples:
+diameter = 25.05
+temperature = 30.5
+length = 125.75
+These are floating-point values.
+4. String – str
+A string is a sequence of characters enclosed in quotation marks.
+Examples:
+"Python"
+"Machine"
+"25"
+"Production Engineering"
+Example:
+name = "Python"
+
+print(name)
+print(type(name))
+Output:
+Python
+<class 'str'>
+Important: Number vs String
+25
+is an integer.
+But:
+"25"
+is a string.
+Example:
+a = 25
+b = "25"
+
+print(type(a))
+print(type(b))
+Output:
+<class 'int'>
+<class 'str'>
+5. Boolean – bool
+A Boolean value represents one of two states:
+True
+False
+Example:
+machine_ready = True
+machine_fault = False
+
+print(type(machine_ready))
+Output:
+<class 'bool'>
+Important:
+Boolean values start with a capital letter:
+True
+False
+Not:
+true
+false
+6. type() Function
+The type() function is used to identify the data type of a value.
+type() acts like a data-type checker.
+7. Literals
+A literal is a fixed value directly written in a Python program.
+Examples:
+25
+25.5
+"Python"
+True
+These are literals.
+Types of literals:
+Literal
+Example
+Type
+Integer
+25
+int
+Float
+25.5
+float
+String
+"25"
+str
+Boolean
+True
+bool
+8. Important Examples of Literals
+Integer literal
+count = 42
+42 is an integer literal.
+Float literal
+diameter = 25.0
+25.0 is a float literal.
+String literal
+part_no = "25"
+"25" is a string literal.
+Boolean literal
+quality_ok = True
+True is a Boolean literal.
+9. Reserved Words / Keywords
+Python has some special words that are already reserved for specific purposes.
+These words are called keywords.
+They should not be used as normal variable names.
+Examples:
+if
+else
+elif
+for
+while
+in
+True
+False
+and
+or
+not
+def
+return
+import
+10. Variable Naming Rules
+A variable name must follow certain rules.
+Rule 1: It can contain letters.
+name = "Part"
+Rule 2: It can contain numbers, but cannot start with a number.
+Correct:
+part1 = 10
+Incorrect:
+1part = 10
+Rule 3: Underscore _ can be used.
+part_count = 50
+This is a good variable name.
+Rule 4: Do not use spaces.
+Rule 5: Do not use Python keywords.
+11. Good Variable Names
+For production engineering programs, meaningful names are useful.
+Instead of:
+x = 50
+we can write:
+part_count = 50
