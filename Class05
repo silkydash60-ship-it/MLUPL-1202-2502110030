@@ -1,17 +1,78 @@
-Job Card 05: Deeper Blocks, First MIT
+JOB 5 – Deeper Blocks, First MIT
+Topic: Declarative and Imperative Knowledge, Computation
+1. Introduction
+Job 5 focuses on understanding how a computer program works and how instructions are given to a computer. It introduces two important ways of describing information:
+Declarative knowledge
+Imperative knowledge
+It also connects block-based programming with Python programming and introduces the basic idea of computation.
+2. Declarative Knowledge
+Declarative knowledge describes what is true or what the final result should be.
+It tells us what, but does not necessarily tell us how to achieve it.
+Example:
+The shaft diameter is 25.00 ± 0.05 mm.
+This statement gives information about the required shaft diameter. It does not explain the machining steps.
+Simple meaning:
+Declarative = What is required?
+Python example:
+diameter = 25.00
+print(diameter)
+Here, diameter = 25.00 represents a fact/value.
+3. Imperative Knowledge
+Imperative knowledge describes how to perform a task.
+It gives a sequence of instructions that should be followed.
+Example:
+Measure the shaft.
+Turn it to 25.4 mm.
+Finish turn it to 25.05 mm.
+Grind it to the required size.
+These are instructions, so they describe how to complete the work.
+Simple meaning:
+Imperative = How should it be done?
+Python example:
+diameter = 25
 
-Core Technical Concepts
+diameter = diameter - 0.5
+print(diameter)
+The statements tell Python what operations to perform.
+What is Computation?
+Computation is the process of solving a problem by performing a series of logical and mathematical operations.
+A computer follows instructions and processes data to produce an output.
+Example:
+a = 10
+b = 20
+sum = a + b
 
-Declarative Knowledge ("The Drawing"): A statement of fact—describes the finished state or desired output but provides no instructions on how to reach it.  
+print(sum)
+Output:
+30
+Working:
+a stores 10.
+b stores 20.
+a + b performs addition.
+The result is stored in sum.
+print() displays the result.
+6. Specification and Process Plan
+A specification tells us what a product or result should be.
+A process plan tells us how to produce that result.
+Example:
+Specification:
+Shaft diameter = 25 mm
+Process plan:
+1. Take the raw material.
+2. Mount it on the machine.
+3. Perform rough machining.
+4. Perform finishing.
+5. Measure the diameter.
+This concept is useful in Production Engineering because manufacturing needs both product specifications and process instructions.
+7. Python as an Imperative Language
+Python can give instructions step by step.
+Example:
+length = 10
+width = 5
 
-Example: "The shaft diameter is 25.00 \pm 0.05\text{ mm}."  
+area = length * width
 
-Imperative Knowledge ("The Route Sheet"): A recipe or sequence of explicit step-by-step operations that, when followed precisely, produces the desired result.  
-Example: "Face the end \rightarrow rough turn to 25.4 \rightarrow finish turn to 25.05 \rightarrow grind to size."  
-
-Definition of Computation: Programming is the process of writing route sheets (imperative knowledge) to produce facts (declarative knowledge) for a machine with no common sense.  
-Key Specifications & Takeaways
-
-Declarative vs. Imperative: Be prepared to classify statements as either facts (declarative) or recipes/process plans (imperative).  
-
-Workflow Rule: Practice reading pure Python code first before looking at block equivalents. 
+print("Area =", area)
+Output:
+Area = 50
+The computer executes the instructions in sequence.
