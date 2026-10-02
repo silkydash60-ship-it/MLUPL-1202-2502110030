@@ -1,1 +1,17 @@
+Job Card 05: Deeper Blocks, First MIT
 
+Core Technical Concepts
+
+Declarative Knowledge ("The Drawing"): A statement of fact—describes the finished state or desired output but provides no instructions on how to reach it.  
+
+Example: "The shaft diameter is 25.00 \pm 0.05\text{ mm}."  
+
+Imperative Knowledge ("The Route Sheet"): A recipe or sequence of explicit step-by-step operations that, when followed precisely, produces the desired result.  
+Example: "Face the end \rightarrow rough turn to 25.4 \rightarrow finish turn to 25.05 \rightarrow grind to size."  
+
+Definition of Computation: Programming is the process of writing route sheets (imperative knowledge) to produce facts (declarative knowledge) for a machine with no common sense.  
+Key Specifications & Takeaways
+
+Declarative vs. Imperative: Be prepared to classify statements as either facts (declarative) or recipes/process plans (imperative).  
+
+Workflow Rule: Practice reading pure Python code first before looking at block equivalents. 
