@@ -1,1 +1,93 @@
+JOB 9 – Go / No-Go Gauging in Code
+Title
+Study of Conditional Statements and Three-Bin Inspection
+Aim
+To understand if, elif, and else statements and use them to classify a measured value into different categories.
+Introduction
+Conditional statements are used when a program has to make a decision based on a condition. In production engineering, they can be used for inspection and quality checking.
+For example, a component can be classified as:
+ACCEPT – within the specified size
+REWORK – oversized
+SCRAP – undersized
+1. if Statement
+The if statement executes a block of code when its condition is true.
+Syntax
+if condition:
+    statement
+Example
+diameter = 25.10
 
+if diameter > 25.05:
+    print("REWORK")
+Output:
+REWORK
+2. if-else Statement
+else is executed when the if condition is false.
+diameter = 25.00
+
+if diameter > 25.05:
+    print("REWORK")
+else:
+    print("ACCEPT")
+Output:
+ACCEPT
+3. if-elif-else
+When there are more than two possible conditions, elif can be used.
+Three-Bin Inspection Program
+The specification is:
+25.00 ± 0.05 mm
+Therefore:
+Lower limit = 24.95 mm
+Upper limit = 25.05 mm
+Program
+dia = float(input("Measured diameter: "))
+
+if dia > 25.05:
+    print("REWORK")
+elif dia < 24.95:
+    print("SCRAP")
+else:
+    print("ACCEPT")
+Example 1
+Input:
+25.02
+Output:
+ACCEPT
+Example 2
+Input:
+25.08
+Output:
+REWORK
+Example 3
+Input:
+24.90
+Output:
+SCRAP
+4. Meaning of the Three Categories
+ACCEPT
+If:
+24.95 ≤ diameter ≤ 25.05
+the component is within specification and is accepted.
+REWORK
+If:
+diameter > 25.05
+the component is oversized and can be sent for rework.
+SCRAP
+If:
+diameter < 24.95
+the component is undersized and is rejected as scrap.
+5. for Loop
+A for loop is used when the number of repetitions is known.
+break and continue
+break
+break immediately stops the loop.
+for i in range(10):
+    if i == 5:
+        break
+    print(i)
+continue
+continue skips the current iteration and moves to the next iteration.
+for i in range(5):
+    if i == 2:
+        continue
+    print(i)
