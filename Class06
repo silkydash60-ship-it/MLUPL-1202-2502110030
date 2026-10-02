@@ -1,1 +1,136 @@
+JOB 6 – Full Transition: The Blocks Come Off
+Topic: Pure Python, Loops, range(), String Joining and Indentation
+Job 6 is the transition from EduBlocks/block programming to pure Python.
+The blocks are removed, but the programming logic remains the same. This means that the learner should now understand Python statements directly instead of depending on blocks.
+1. From Blocks to Python
+A block program may look like:
+Set count to 0
+Repeat 5 times
+    Change count by 1
+    Say "parts made: " + count
+The same logic can be written in Python as:
+count = 0
 
+for i in range(5):
+    count = count + 1
+    print("parts made:", count)
+Output:
+parts made: 1
+parts made: 2
+parts made: 3
+parts made: 4
+parts made: 5
+This shows how block programming can be converted into normal Python code.
+2. Variables
+A variable is a name used to store a value.
+Example:
+count = 0
+Here:
+count → variable name
+0 → value
+= → assignment operator
+Another example:
+parts = 10
+print(parts)
+Output:
+10
+3. Loops
+A loop is used to repeat a set of instructions.
+Instead of writing the same instruction many times, we can use a loop.
+Example:
+for i in range(5):
+    print("Production")
+Output:
+Production
+Production
+Production
+Production
+Production
+The statement inside the loop executes five times.
+4. range() Function
+The range() function generates a sequence of numbers.
+Example:
+for i in range(5):
+    print(i)
+Output:
+0
+1
+2
+3
+4
+Important:
+range(5) does not give:
+1 2 3 4 5
+It gives:
+0 1 2 3 4
+because Python starts counting from 0 by default.
+Another Example
+for i in range(4):
+    print("Part", i)
+Output:
+Part 0
+Part 1
+Part 2
+Part 3
+5. Indentation in Python
+Indentation means adding spaces at the beginning of a line.
+Python uses indentation to identify which statements belong to a loop, condition, function, etc.
+Correct:
+for i in range(3):
+    print(i)
+The print() statement is inside the loop because it is indented.
+Incorrect:
+for i in range(3):
+print(i)
+This gives an IndentationError.
+Important rule:
+After a statement ending with :, the next block of code must normally be indented.
+Example:
+if x > 10:
+    print("Large")
+6. String Joining
+Strings can be combined to create a larger string.
+Example:
+name = "Part"
+number = "5"
+
+print(name + number)
+Output:
+Part5
+If a space is required:
+print(name + " " + number)
+Output:
+Part 5
+7. Important Trap: "25" + "30"
+Both "25" and "30" are strings because they are inside quotation marks.
+Therefore:
+print("25" + "30")
+Output:
+2530
+It does not produce:
+55
+Why?
+Because + joins strings when both operands are strings.
+8. Addition of Numbers
+Without quotation marks, numbers are treated as integers.
+print(25 + 30)
+Output:
+55
+Difference:
+print("25" + "30")
+Output:
+2530`
+
+```python
+print(25 + 30)
+Output:
+55
+9. Dry Run
+A dry run means predicting the output of a program before actually running it.
+Example:
+count = 0
+
+for i in range(4):
+    count = count + 1
+
+print(count)
