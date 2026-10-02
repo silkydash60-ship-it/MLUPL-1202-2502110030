@@ -1,1 +1,115 @@
+JOB 10 – The Tool Crib
+Title
+Study of Python Modules and Import Statements
+Introduction
+A module is a Python file containing functions, variables, constants and other useful code. Python provides many built-in modules that can be imported and used in programs.
+Some commonly used modules are:
+math
+random
+1. Importing a Complete Module
+The complete module can be imported using:
+import math
+After importing, we access its functions using the module name.
+Example
+import math
+print(math.sqrt(50))
+print(math.pi)
+Output
+7.0710678118654755
+3.141592653589793
+Here:
+math.sqrt() calculates square root.
+math.pi gives the value of π.
+2. Importing Specific Functions
+Instead of importing the complete module, we can import only the required function.
+from math import sqrt
+Now we can directly use:
+print(sqrt(50))
+Output:
+7.0710678118654755
+There is no need to write math.sqrt().
+3. Difference Between import math and from math import sqrt
+Using import math
+import math
+print(math.sqrt(50))
+Here, the function is accessed using:
+math.sqrt()
+Using from math import sqrt
+from math import sqrt
+print(sqrt(50))
+Here, sqrt() can be used directly.
+4. math.ceil() and math.floor()
+These functions are useful for rounding numbers.
+math.ceil()
+ceil() rounds a number upward to the next integer.
+import math
+
+print(math.ceil(137 / 12))
+Output:
+12
+Although:
+137 / 12 = 11.4167
+ceil() gives:
+12
+math.floor()
+floor() rounds a number downward.
+import math
+
+print(math.floor(137 / 12))
+Output:
+11
+So:
+ceil() → round upward
+floor() → round downward
+5. Random Module
+The random module is used to generate random values.
+First import it:
+import random
+random.randint()
+randint() generates a random integer between the given limits.
+import random
+
+print(random.randint(1, 6))
+Possible output:
+4
+Another time it may produce:
+2
+The value changes because it is randomly generated.
+random.uniform()
+uniform() generates a random floating-point number within a specified range.
+import random
+
+x = random.uniform(24.90, 25.10)
+print(x)
+Possible output:
+25.034721
+This can be useful for simulating measured production data.
+6. Simulated Inspection Program
+import random
+
+accept = 0
+rework = 0
+scrap = 0
+
+for i in range(10):
+    dia = random.uniform(24.90, 25.10)
+
+    if dia > 25.05:
+        print(dia, "REWORK")
+        rework += 1
+
+    elif dia < 24.95:
+        print(dia, "SCRAP")
+        scrap += 1
+
+    else:
+        print(dia, "ACCEPT")
+        accept += 1
+
+print("ACCEPT:", accept)
+print("REWORK:", rework)
+print("SCRAP:", scrap)
+This program generates 10 simulated diameter measurements and classifies each measurement into ACCEPT, REWORK, or SCRAP.
+7. NameError
+A NameError occurs when Python cannot find the name of a function, variable or object.
 
