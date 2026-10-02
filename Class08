@@ -1,1 +1,125 @@
 
+JOB 8 – Feeds and Speeds
+Operators are special symbols used to perform operations on values and variables. Python provides different operators for mathematical calculations, comparison and other operations.
+1. Arithmetic Operators
+Arithmetic operators are used to perform mathematical calculations.
+Operator
+Meaning
+Example
+Result
++
+Addition
+10 + 5
+15
+-
+Subtraction
+10 - 5
+5
+*
+Multiplication
+10 * 5
+50
+/
+Division
+10 / 5
+2.0
+//
+Floor Division
+10 // 3
+3
+%
+Modulus
+10 % 3
+1
+**
+Exponent
+2 ** 3
+8
+Example
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+print(a // b)
+print(a % b)
+print(a ** b)
+Output
+13
+7
+30
+3.3333333333333335
+3
+1
+1000
+2. Floor Division //
+Floor division gives the whole-number quotient by removing the fractional part.
+137 // 12
+Output:
+11
+It means 137 parts can make 11 complete groups of 12.
+3. Modulus %
+The modulus operator gives the remainder after division.
+137 % 12
+Output:
+5
+Therefore:
+12 × 11 + 5 = 137
+So there are 11 complete groups and 5 remaining parts.
+4. Comparison Operators
+Comparison operators compare two values and return either True or False.
+Operator
+Meaning
+==
+Equal to
+!=
+Not equal to
+>
+Greater than
+<
+Less than
+>=
+Greater than or equal to
+<=
+Less than or equal to
+Example
+a = 25
+b = 30
+
+print(a == b)
+print(a != b)
+print(a < b)
+print(a > b)
+Output
+False
+True
+True
+False
+5. Type Conversion
+Python allows us to convert one data type into another.
+For example, input received using input() is normally a string.
+n = int(input("Enter a number: "))
+print(n)
+Here, int() converts the entered value into an integer.
+Example
+age = int(input("Enter your age: "))
+print(age + 1)
+If the input is:
+18
+Output:
+19
+6. TypeError
+A TypeError occurs when incompatible data types are used with an operation.
+Example:
+print(25 + "30")
+This gives an error because an integer and a string cannot be directly added.
+Correct method:
+print(25 + int("30"))
+Output:
+55
+For joining strings:
+print(str(25) + "30")
+Output:
+2530
