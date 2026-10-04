@@ -1,0 +1,98 @@
+JOB 13 – A Bin of Parts
+Title
+Study of Lists and List Operations
+A list is a collection of elements stored inside square brackets [ ]. Unlike strings, lists are mutable, which means their elements can be changed.
+Example:
+bin = [25.02, 24.98, 25.05]
+1. Creating a List
+dias = [25.02, 24.98, 25.05]
+
+print(dias)
+Output:
+[25.02, 24.98, 25.05]
+2. Accessing List Elements
+print(dias[0])
+print(dias[1])
+Output:
+25.02
+24.98
+Lists also use zero-based indexing.
+3. Changing a List Element
+Unlike strings, list elements can be changed.
+bin = [25.02, 24.98, 25.05]
+
+bin[0] = 25.01
+
+print(bin)
+Output:
+[25.01, 24.98, 25.05]
+4. append()
+append() adds an element at the end of the list.
+bin = [25.02, 24.98, 25.05]
+
+bin.append(25.10)
+
+print(bin)
+Output:
+[25.02, 24.98, 25.05, 25.10]
+5. insert()
+insert() adds an element at a specified position.
+bin.insert(1, 24.90)
+
+print(bin)
+The new element is inserted at index 1.
+6. pop()
+pop() removes an element using its position and returns that element.
+bin = [25.02, 24.98, 25.05]
+
+x = bin.pop()
+
+print(x)
+print(bin)
+It removes the last element by default.
+A particular position can also be specified:
+bin.pop(1)
+7. remove()
+remove() removes an element by its value.
+bin = [25.02, 24.98, 25.05]
+
+bin.remove(24.98)
+
+print(bin)
+Output:
+[25.02, 25.05]
+Difference
+pop() → removes by position
+remove() → removes by value
+8. sort()
+sort() arranges the list in ascending order.
+dias = [25.05, 24.98, 25.02]
+
+dias.sort()
+
+print(dias)
+Output:
+[24.98, 25.02, 25.05]
+9. reverse()
+reverse() reverses the order of elements.
+dias.reverse()
+
+print(dias)
+10. List Slicing
+Lists also support slicing.
+dias = [25.02, 24.98, 25.05, 24.90]
+
+print(dias[1:3])
+Output:
+[24.98, 25.05]
+List vs String
+List
+String
+Mutable
+Immutable
+Uses [ ]
+Uses quotes
+Elements can be changed
+Characters cannot be changed
+Can use append()
+Cannot use append()
