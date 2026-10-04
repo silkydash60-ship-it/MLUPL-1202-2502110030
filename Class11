@@ -1,0 +1,72 @@
+JOB 11 – Cycle-Time Data
+Title
+Study of Date and Time and Arrays in Python
+
+cycle time is the time required to complete a particular operation. Python can calculate cycle time by recording the starting and ending time of an operation.
+Python also provides arrays to store multiple values of the same data type.
+1. Date and Time using datetime
+The datetime module is used to work with date and time.
+Syntax
+from datetime import datetime
+Example
+from datetime import datetime
+
+start = datetime.now()
+
+for i in range(1000000):
+    pass
+
+end = datetime.now()
+
+cycle = end - start
+
+print(cycle)
+print(cycle.total_seconds(), "s")
+Explanation
+datetime.now() records the current date and time.
+start stores the starting time.
+end stores the finishing time.
+end - start calculates the duration.
+total_seconds() converts the duration into seconds.
+2. Cycle Time
+Cycle time is the total time taken to complete one operation or process.
+The basic formula is:
+Cycle Time = End Time − Start Time
+For example, if an operation starts at 10:00:00 and ends at 10:00:15:
+Cycle Time = 15 seconds
+3. Arrays in Python
+An array is used to store multiple values of the same data type.
+Python provides the array module for creating typed arrays.
+Syntax
+from array import array
+Example
+from array import array
+
+dias = array('f', [25.02, 24.98, 25.05])
+
+print(dias)
+print(dias[0])
+print(dias[2])
+Explanation
+Here:
+'f' means the array stores floating-point values.
+dias contains three diameter readings.
+dias[0] gives the first reading.
+dias[2] gives the third reading.
+4. Indexing
+Python uses zero-indexing, which means the first element has index 0.
+For:
+dias = [25.02, 24.98, 25.05]
+Index
+Value
+0
+25.02
+1
+24.98
+2
+25.05
+Therefore:
+print(dias[0])
+gives the first value.
+Important Point
+Index means distance from the beginning, not the counting number of the item.
