@@ -1,0 +1,80 @@
+JOB 16 – Part-Number Lookups
+Title
+Study of Dictionaries and Key-Value Pairs
+A dictionary is a Python data structure that stores information in the form of key-value pairs.
+It is useful in production engineering for storing part numbers and their corresponding quantities.
+1. Creating a Dictionary
+stock = {
+    "PE-26-0137": 42,
+    "PE-26-0201": 7,
+    "PE-26-0345": 130
+}
+
+print(stock)
+Here:
+"PE-26-0137" is a key.
+42 is its value.
+2. Accessing a Value
+A value can be accessed directly using its key.
+print(stock["PE-26-0201"])
+Output:
+7
+This is faster than searching through a list.
+3. Updating a Value
+An existing value can be changed.
+stock["PE-26-0201"] = 6
+
+print(stock["PE-26-0201"])
+Output:
+6
+4. Adding a New Entry
+A new key-value pair can be added simply by assigning a value.
+stock["PE-26-0999"] = 15
+
+print(stock)
+5. Deleting an Entry
+The del statement can remove an entry.
+del stock["PE-26-0137"]
+The specified key and its value are removed.
+6. KeyError
+If we try to access a key that does not exist:
+print(stock["PE-99-XXXX"])
+Python produces:
+KeyError
+This happens because the requested key is not present in the dictionary.
+7. Using get()
+The get() method can safely access a value.
+print(stock.get("PE-99-XXXX", 0))
+Output:
+0
+If the key does not exist, the default value 0 is returned instead of producing a KeyError.
+8. Dictionary Functions
+keys()
+Returns all keys.
+print(stock.keys())
+values()
+Returns all values.
+print(stock.values())
+items()
+Returns key-value pairs.
+for part, qty in stock.items():
+    print(part, qty)
+9. Number of Different Parts
+print(len(stock))
+This gives the number of different part numbers stored in the dictionary.
+10. Total Quantity
+print(sum(stock.values()))
+This gives the total number of parts in stock.
+11. Counting Defect Codes Using Dictionary
+Dictionaries can also be used to count how many times each defect occurs.
+codes = ["D01", "D07", "D01", "D03", "D01"]
+
+count = {}
+
+for c in codes:
+    count[c] = count.get(c, 0) + 1
+
+print(count)
+Output:
+{'D01': 3, 'D07': 1, 'D03': 1}
+Here, D01 is the most frequent defect code.
