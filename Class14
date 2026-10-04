@@ -1,0 +1,93 @@
+JOB 14 – Map, Filter, Mutability
+Title
+Study of List Processing, Comprehension and Mutability
+Lists are commonly used to store and process a group of values. Python provides loops and list comprehension to process list elements efficiently.
+1. Processing a List Using Loop
+dias = [25.02, 24.90, 25.05, 24.98]
+
+accepted = []
+
+for d in dias:
+    if 24.95 <= d <= 25.05:
+        accepted.append(d)
+
+print(accepted)
+Output:
+[25.02, 25.05, 24.98]
+Only the readings within the specified range are accepted.
+2. List Comprehension
+List comprehension provides a shorter way of creating a new list.
+dias = [25.02, 24.90, 25.05, 24.98]
+
+accepted = [d for d in dias if 24.95 <= d <= 25.05]
+
+print(accepted)
+Output:
+[25.02, 25.05, 24.98]
+Basic Structure
+[expression for item in list if condition]
+3. Converting Values
+List comprehension can also be used to convert values.
+dias = [25.02, 24.90, 25.05]
+
+microns = [d * 1000 for d in dias]
+
+print(microns)
+This converts millimetre values into micrometres.
+4. Useful List Functions
+Length
+len(dias)
+Gives the number of elements.
+Sum
+sum(dias)
+Gives the total.
+Maximum
+max(dias)
+Gives the largest value.
+Minimum
+min(dias)
+Gives the smallest value.
+Average
+sum(dias) / len(dias)
+Calculates the average.
+5. sorted() vs sort()
+sorted()
+Creates a new sorted list and does not change the original list.
+dias = [25.05, 24.98, 25.02]
+
+new_dias = sorted(dias)
+
+print(new_dias)
+print(dias)
+sort()
+Changes the original list.
+dias.sort()
+Therefore:
+sorted() → returns a new sorted list
+sort() → changes the original list
+6. Aliasing
+Aliasing occurs when two variables refer to the same list.
+shift_a = [25.02, 24.98]
+
+shift_b = shift_a
+
+shift_b.append(25.10)
+
+print(shift_a)
+Output:
+[25.02, 24.98, 25.10]
+The original list also changed because both variables refer to the same list.
+7. Copying a List
+To create a separate copy:
+shift_a = [25.02, 24.98]
+
+shift_b = shift_a.copy()
+
+shift_b.append(25.10)
+
+print(shift_a)
+print(shift_b)
+Output:
+[25.02, 24.98]
+[25.02, 24.98, 25.10]
+Now the two lists are independent.
