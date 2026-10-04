@@ -1,0 +1,78 @@
+JOB 15 – Tuples & Sets
+Title
+Study of Tuples and Sets
+Python provides different types of containers for storing data. A tuple is an ordered and immutable collection, while a set is an unordered collection containing unique elements.
+1. Tuple
+A tuple is created using round brackets ( ).
+spec = (24.95, 25.05)
+
+print(spec)
+Output:
+(24.95, 25.05)
+A tuple can contain multiple values.
+2. Tuple Indexing
+Tuples support indexing.
+spec = (24.95, 25.05)
+
+print(spec[0])
+print(spec[1])
+Output:
+24.95
+25.05
+3. Tuple is Immutable
+Tuple elements cannot be changed after creation.
+spec = (24.95, 25.05)
+
+spec[0] = 24.90
+This produces:
+TypeError
+Therefore, tuples are useful for values that should remain fixed.
+Example Uses
+Fixed limits
+Calibration constants
+Fixed coordinates
+Specifications
+4. Tuple Unpacking
+Values from a tuple can be assigned to separate variables.
+spec = (24.95, 25.05)
+
+lower, upper = spec
+
+print(lower)
+print(upper)
+Output:
+24.95
+25.05
+5. Set
+A set is created using curly brackets { }.
+codes = {"D01", "D07", "D01", "D03"}
+
+print(codes)
+Duplicate values are automatically removed.
+Possible output:
+{'D01', 'D07', 'D03'}
+6. Important Properties of Sets
+Sets contain unique values.
+Duplicate values are removed.
+Sets are unordered.
+Sets are useful for checking membership and comparing groups.
+7. Set Operations
+Suppose:
+day = {"D01", "D03", "D07", "D12"}
+night = {"D07", "D12", "D19", "D22"}
+Union
+Gives all elements from both sets.
+print(day | night)
+Intersection
+Gives elements common to both sets.
+print(day & night)
+Result:
+{'D07', 'D12'}
+Difference
+Gives elements present in one set but not in the other.
+print(day - night)
+Result:
+{'D01', 'D03'}
+8. Set Length
+print(len(day))
+It gives the number of unique elements in the set.
