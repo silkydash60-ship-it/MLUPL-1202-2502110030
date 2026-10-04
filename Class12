@@ -1,0 +1,81 @@
+JOB 12 – Strings & Characters
+Title
+Study of Strings, Indexing and Slicing
+A string is a sequence of characters enclosed within single or double quotation marks.
+Example:
+code = "VSSUT-PE-26-0137"
+Each character in a string has a fixed position called an index.
+1. Creating a String
+code = "VSSUT-PE-26-0137"
+print(code)
+Output:
+VSSUT-PE-26-0137
+2. Length of a String
+The len() function gives the number of characters in a string.
+code = "VSSUT-PE-26-0137"
+
+print(len(code))
+Output:
+16
+3. String Indexing
+A character can be accessed using its index.
+code = "VSSUT-PE-26-0137"
+
+print(code[1])
+print(code[-1])
+Output:
+S
+7
+Here:
+code[1] gives the second character.
+code[-1] gives the last character.
+Negative Indexing
+Negative indexing starts from the end:
+Index
+Meaning
+-1
+Last character
+-2
+Second-last
+-3
+Third-last
+4. String Slicing
+Slicing is used to extract a part of a string.
+Syntax
+string[start:stop]
+The start is included, but the stop is excluded.
+Example:
+code = "VSSUT-PE-26-0137"
+
+print(code[6:8])
+Output:
+PE
+The length of a slice is:
+stop − start
+5. String Repetition
+The * operator can repeat a string.
+print("GO " * 3)
+Output:
+GO GO GO
+6. Membership Operator
+The in operator checks whether a character or substring is present in a string.
+code = "VSSUT-PE-26-0137"
+
+print("PE" in code)
+Output:
+True
+7. Strings are Immutable
+Strings in Python are immutable, which means their individual characters cannot be changed directly.
+Incorrect:
+code = "VSSUT"
+code[0] = "X"
+This gives:
+TypeError: 'str' object does not support item assignment
+Correct Method
+Create a new string using slicing:
+code = "VSSUT"
+code = "X" + code[1:]
+
+print(code)
+Output:
+XSSUT
