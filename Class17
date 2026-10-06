@@ -1,0 +1,54 @@
+JOB 17 — Fixtures for Code
+Topic: Functions, Parameters, Return Value and Local Scope
+1. Aim
+To understand how to create and use functions in Python with parameters, default arguments and return values.
+2. Introduction
+A function is a reusable block of code that performs a particular task. Functions are useful because the same code does not need to be written again and again.
+A function mainly consists of:
+Function name
+Parameters
+Function body
+Return statement
+3. Syntax
+def function_name(parameters):
+    # statements
+    return value
+4. Example
+def inspect(dia, lower=24.95, upper=25.05):
+    if dia > upper:
+        return "REWORK"
+    elif dia < lower:
+        return "SCRAP"
+    return "ACCEPT"
+
+print(inspect(25.02))
+print(inspect(25.00, 25.04, 25.04))
+print(inspect(25.02, upper=25.01))
+Output
+ACCEPT
+SCRAP
+REWORK
+Explanation
+dia is a parameter.
+lower and upper are default parameters.
+return sends the result back to the calling program.
+The values of lower and upper can be changed while calling the function.
+5. Local Variable and Scope
+A variable created inside a function is called a local variable. It can normally be accessed only inside that function.
+def tally_up(codes):
+    total = 0
+    for c in codes:
+        total += 1
+    return total
+
+n = tally_up(["D01", "D07"])
+print(n)
+Output
+2
+total is local to tally_up(). It cannot be directly used outside the function.
+Key Points
+def is used to define a function.
+Parameters receive input values.
+return sends a result back.
+Default arguments provide standard values.
+Local variables belong to the function.
