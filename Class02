@@ -1,19 +1,41 @@
-Job02: Logic You Can Touch
-
-Topic: Sequence, Decision, and Repetition using block-based logic (Scratch).  
-Core Concept: Moving from physical/shop floor operational logic (like automated stamping or inspection) to programming logic.  
-Key Programming Concepts & Python Mapping
-Repetition (Loops):
-Block Logic: Run enclosed blocks N times.  
-Python Future: for i in range(10):  
-Shop Analogy: Stamping 500 blanks using one defined cycle.  
-Decision Making (Conditionals):
-Block Logic: Test a condition and take one of two paths (accept or reject).  
-Python Future: if dia <= limit: ... else:  
-Shop Analogy: Go / No-Go Gauge inspection ("If within tolerance \rightarrow accept bin, else \rightarrow reject bin").  
-Input / Sensing:
-Block Logic: Sensing interaction or key press.  
-Python Future: ask() \rightarrow input().  
-Variables:
-Block Logic: A labeled bin holding a value (counter, score, diameter).  
-Python Future: count = 0.
+JOB 2 – Logic Using Sequence, Repetition and Decision
+Job 2 introduces the basic logic used in programming. A program can be understood as a set of instructions given to a computer to perform a task. The main ideas introduced in this job are sequence, repetition (loops), conditions and variables.
+1. Sequence
+A sequence means executing instructions one after another in a fixed order.
+For example:
+Take the required measurement.
+Compare it with the specification.
+Accept or reject the part.
+Display the result.
+The computer follows the instructions in the same order in which they are written.
+2. Repetition / Loop
+Repetition means performing the same set of instructions multiple times. A loop avoids writing the same instructions again and again.
+For example, if a machine has to inspect 500 parts, the inspection process can be written once and repeated 500 times.
+In Python, repetition is commonly performed using a for or while loop.
+Example:
+for i in range(5):
+    print("Inspect the part")
+3. If–Else Decision
+An if–else statement allows a program to make a decision based on a condition.
+Example:
+if dia <= 25.05:
+    print("Accept")
+else:
+    print("Reject")
+Here, the program checks the diameter and chooses one of two possible actions.
+4. Variables
+A variable is a named storage location used to hold a value.
+Example:
+count = 0
+The value of count can be changed during program execution.
+5. Sensing and Conditions
+A program can take information as input and use it to make decisions. For example, a quality-control program can check whether a measured diameter is within the permitted tolerance.
+For a specification of 25.00 ± 0.05 mm, the acceptable range is:
+24.95 mm ≤ diameter ≤ 25.05 mm
+Thus, programming logic can be used for simple inspection and manufacturing decisions.
+Important points
+Sequence → instructions execute in order.
+Loop → repeats instructions.
+If–else → makes decisions.
+Variable → stores a value.
+These concepts form the basic logic used later in Python programming.
