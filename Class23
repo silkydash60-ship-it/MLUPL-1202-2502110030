@@ -1,0 +1,50 @@
+JOB 23 — Poka-Yoke for Programs
+
+Topic: Exception Handling — try, except, else, finally
+1. Aim
+To understand how Python handles errors using exception handling.
+2. Exception
+An exception is an error that occurs while a program is running.
+Common exceptions include:
+ValueError
+TypeError
+NameError
+KeyError
+IndexError
+AttributeError
+ZeroDivisionError
+3. Basic Syntax
+try:
+    # risky code
+except ExceptionType:
+    # error handling
+4. Example
+try:
+    dia = float(input("Diameter: "))
+except ValueError:
+    print("Please enter a number")
+else:
+    print("Reading accepted")
+finally:
+    print("Gauge released")
+If input is:
+25.02
+Output:
+Reading accepted
+Gauge released
+If the user enters:
+twenty
+Output:
+Please enter a number
+Gauge released
+5. Meaning of Blocks
+try
+Contains code that may produce an error.
+except
+Handles the expected error.
+else
+Runs when no exception occurs.
+finally
+Runs whether an error occurs or not.
+Important Rule
+Do not use a very broad except unnecessarily. It is better to catch the specific error that you expect.
