@@ -1,0 +1,78 @@
+JOB 25 — String Methods & Formatting
+Topic: String Methods and f-Strings
+1. Aim
+To understand important Python string methods and formatting techniques.
+A string is a sequence of characters enclosed in quotes.
+name = "Silky"
+2. Important String Methods
+Method
+Use
+.strip()
+Removes spaces from beginning and end
+.upper()
+Converts to uppercase
+.lower()
+Converts to lowercase
+.replace()
+Replaces text
+.startswith()
+Checks beginning of string
+.split()
+Converts string into a list
+.join()
+Joins list items into a string
+.zfill()
+Adds zeros at the beginning
+.count()
+Counts occurrences
+.find()
+Finds position of text
+Example
+text = "  PE-0137,25.02,ACCEPT  "
+
+text = text.strip()
+print(text)
+print(text.upper())
+print(text.split(","))
+Output
+PE-0137,25.02,ACCEPT
+PE-0137,25.02,ACCEPT
+['PE-0137', '25.02', 'ACCEPT']
+3. split() and join()
+fields = ["PE-0137", "25.02", "ACCEPT"]
+
+row = ",".join(fields)
+print(row)
+
+back = row.split(",")
+print(back)
+Output
+PE-0137,25.02,ACCEPT
+['PE-0137', '25.02', 'ACCEPT']
+split() converts text → list.
+join() converts list → text.
+4. f-String Formatting
+f-strings are used to insert values into strings and control their appearance.
+dia = 25.02
+tag = "L-01"
+
+print(f"{tag:<12}")
+print(f"{dia:>10.2f}")
+Meaning
+< → left alignment
+> → right alignment
+^ → center alignment
+10 → field width
+.2f → two decimal places
+Example
+total = 1240.50
+
+print(f"{total:>12,.2f}")
+Output:
+    1,240.50
+Percentage
+value = 0.9375
+
+print(f"{value:.1%}")
+Output:
+93.8%
