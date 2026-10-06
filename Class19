@@ -1,0 +1,64 @@
+JOB 19 — Model Lathe as Class
+Topic: Classes, Objects, Attributes and Methods
+1. Aim
+To understand Object-Oriented Programming (OOP) using classes and objects.
+2. Class
+A class is a blueprint or drawing used to create objects.
+An object is an actual instance of a class.
+For example:
+Lathe → class
+L1 → object
+3. Example
+class Lathe:
+    def __init__(self, tag, max_rpm=2000):
+        self.tag = tag
+        self.max_rpm = max_rpm
+        self.rpm = 0
+        self.parts_made = 0
+
+    def start(self, rpm):
+        if rpm > self.max_rpm:
+            return "REFUSED: over rated speed"
+
+        self.rpm = rpm
+        return f"{self.tag} running at {rpm} rpm"
+
+    def make_part(self):
+        if self.rpm == 0:
+            return "REFUSED: spindle stopped"
+
+        self.parts_made += 1
+        return f"{self.tag} made part {self.parts_made}"
+4. Creating Objects
+L1 = Lathe("L-01")
+L2 = Lathe("L-02", 3500)
+
+print(L1.start(1200))
+print(L1.make_part())
+print(L2.make_part())
+Output
+L-01 running at 1200 rpm
+L-01 made part 1
+REFUSED: spindle stopped
+5. Important Terms
+__init__()
+It is a special method called automatically when an object is created.
+self
+self refers to the current object.
+Attributes
+Data stored inside an object.
+Example:
+L1.tag
+L1.rpm
+L1.parts_made
+Methods
+Functions defined inside a class.
+Example:
+L1.start(1200)
+L1.make_part()
+Key Points
+Class is a blueprint.
+Object is an instance of a class.
+Attributes represent data.
+Methods represent actions.
+self refers to the current object.
