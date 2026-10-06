@@ -1,0 +1,36 @@
+JOB 21 — Commissioning & Decommissioning
+Topic: __init__(), __str__() and __del__()
+1. Aim
+To understand special methods used in Python classes.
+2. __init__()
+__init__() is automatically called when an object is created.
+class Lathe:
+    def __init__(self, tag, max_rpm):
+        self.tag = tag
+        self.max_rpm = max_rpm
+        self.parts = 0
+It initializes the object.
+3. __str__()
+__str__() defines what should be displayed when an object is printed.
+class Lathe:
+    def __init__(self, tag, max_rpm):
+        self.tag = tag
+        self.max_rpm = max_rpm
+        self.parts = 0
+
+    def __str__(self):
+        return f"{self.tag} | {self.max_rpm} rpm | {self.parts} parts"
+Example
+L1 = Lathe("L-01", 2000)
+print(L1)
+Output
+L-01 | 2000 rpm | 0 parts
+4. __del__()
+__del__() is a special method associated with object destruction.
+def __del__(self):
+    print(f"{self.tag} decommissioned")
+It may be called when an object is destroyed, but it should not generally be relied upon for important cleanup operations.
+Key Points
+__init__() → initializes an object.
+__str__() → controls readable object representation.
+__del__() → associated with object destruction
