@@ -1,0 +1,45 @@
+JOB 20 — Guarding the Machine
+
+Topic: Encapsulation and Abstraction
+1. Aim
+To understand encapsulation and abstraction in Python.
+2. Encapsulation
+Encapsulation means keeping the internal data of an object protected and controlling how it is accessed or modified.
+Python uses underscores such as _ and __ to indicate protected/private-style attributes.
+3. Example
+class Lathe:
+    def __init__(self, tag, max_rpm=2000):
+        self.tag = tag
+        self.max_rpm = max_rpm
+        self.__rpm = 0
+        self.__parts = 0
+
+    def start(self, rpm):
+        if not 0 < rpm <= self.max_rpm:
+            return "REFUSED: outside rated range"
+
+        self.__rpm = rpm
+        return "Running"
+
+    def status(self):
+        return {
+            "tag": self.tag,
+            "rpm": self.__rpm,
+            "parts": self.__parts
+        }
+Use
+L1 = Lathe("L-01")
+
+print(L1.start(1500))
+print(L1.status())
+Output
+Running
+{'tag': 'L-01', 'rpm': 1500, 'parts': 0}
+__rpm and __parts are internal attributes.
+4. Abstraction
+Abstraction means showing only the necessary features to the user while hiding unnecessary internal details.
+For a machine operator, the control panel may show:
+L1.start(1200)
+L1.make_part()
+L1.status()
+The operator does not need to know the internal calculations.
