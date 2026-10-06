@@ -1,0 +1,50 @@
+JOB 18 — Lambda & Recursion
+Topic: Lambda Function and Recursion
+1. Aim
+To understand lambda functions and recursive functions in Python.
+2. Lambda Function
+A lambda function is a small anonymous function written in a single line.
+Syntax
+lambda arguments: expression
+Example
+check = lambda p: p[1] > 25.05
+
+part = ("PE-0137", 25.09)
+
+print(check(part))
+Output
+True
+Lambda functions are useful when a small function is needed only once.
+Sorting using lambda
+parts = [
+    ("PE-0137", 25.02),
+    ("PE-0201", 24.90),
+    ("PE-0345", 25.09)
+]
+
+sorted_parts = sorted(parts, key=lambda p: p[1])
+
+print(sorted_parts)
+Output
+[('PE-0201', 24.9), ('PE-0137', 25.02), ('PE-0345', 25.09)]
+3. Recursion
+Recursion is a process in which a function calls itself to solve a problem.
+A recursive function must have:
+Base case — stops recursion.
+Recursive step — calls the function again with a smaller/simpler problem.
+Example
+def count_parts(item):
+    if item["children"] == []:
+        return item["qty"]
+
+    total = 0
+    for child in item["children"]:
+        total += count_parts(child)
+
+    return total + item["qty"]
+Here, count_parts() calls itself for each child part.
+Key Points
+Lambda = small one-line anonymous function.
+Recursion = function calling itself.
+Every recursive function needs a base case.
+Without a base case, Python may produce RecursionError.
