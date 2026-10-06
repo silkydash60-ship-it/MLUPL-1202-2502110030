@@ -1,14 +1,37 @@
 Job 01: From Blocks to Thinking
 
-Algorithm: A step-by-step method used to solve a problem.
-Sequence: Performing instructions in the correct order.
-Input: The information given to a program.
-Process: The operations performed on the input.
-Output: The final result produced by the program.
-Scratch: A block-based programming tool used to understand programming logic visually.
-A manufacturing process can also be written as an ordered route sheet, just like a program.
-Example: Making Tea
-Boil water.
-Add tea leaves and spices.
-Simmer until it rises.
-Add milk and sugar.
+Introduction
+Job 1 introduces the basic idea of programming and computational thinking. Before writing Python programs, we learn how to think like a process planner. A program is a set of instructions that tells a computer or machine what to do and in what order.
+1. Algorithm
+An algorithm is a step-by-step procedure used to solve a problem or complete a task.
+Example: A manufacturing process may follow:
+Take the raw material.
+Perform the required operation.
+Inspect the part.
+Produce the finished part.
+Thus, an algorithm gives a clear sequence of actions.
+2. Sequence
+A sequence means performing instructions in a particular order. 
+The computer follows the instructions from beginning to end.
+For example:
+Input → Process → Output
+Input: Raw material or required data
+Process: Operations performed on it
+Output: Finished part or result
+3. Scratch Programming
+In Job 1, Scratch is used to understand programming through visual blocks. 
+Different blocks represent different instructions, and they can be joined together to create a sequence.
+A simple Scratch program can be designed as a series of steps and its output can be predicted before running it.
+4. Importance in Production Engineering
+Programming is useful for production engineers in areas such as:
+Machine and process automation
+Quality inspection
+Production data analysis
+Cycle-time monitoring
+Manufacturing process control
+5. Main Learning
+The important lesson of Job 1 is to think before writing a program. 
+Any task can be divided into clear and ordered steps.
+This way of thinking becomes the foundation for learning Python in the later jobs.
+Key concept:
+Algorithm → Sequence → Input → Process → Output
