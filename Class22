@@ -1,0 +1,61 @@
+JOB 22 — One Drawing, Many Machines
+Topic: Inheritance
+1. Aim
+To understand inheritance and code reuse in Python.
+2. Inheritance
+Inheritance allows a child class to use the properties and methods of a parent class.
+Example:
+Machine
+   |
+   ├── Lathe
+   └── Press
+Lathe and Press can inherit common features from Machine.
+3. Example
+class Machine:
+    def __init__(self, tag):
+        self.tag = tag
+        self.running = False
+        self.hours = 0
+
+    def start(self):
+        self.running = True
+        return f"{self.tag} started"
+
+    def stop(self):
+        self.running = False
+        return f"{self.tag} stopped"
+
+    def status(self):
+        return f"{self.tag}: running={self.running}"
+Child Class
+class Lathe(Machine):
+    def __init__(self, tag, max_rpm=2000):
+        super().__init__(tag)
+        self.max_rpm = max_rpm
+        self.parts = 0
+
+    def make_part(self):
+        if not self.running:
+            return "REFUSED: not running"
+
+        self.parts += 1
+        return f"{self.tag} made part {self.parts}"
+Example
+L1 = Lathe("L-01")
+
+print(L1.start())
+print(L1.make_part())
+print(L1.status())
+Output
+L-01 started
+L-01 made part 1
+L-01: running=True
+4. super()
+super() is used to access the parent class.
+super().__init__(tag)
+It allows the child class to use the initialization of the parent class.
+Key Points
+Parent class provides common features.
+Child class inherits those features.
+super() accesses the parent class.
+Inheritance reduces code duplication
