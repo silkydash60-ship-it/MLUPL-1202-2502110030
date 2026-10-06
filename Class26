@@ -1,0 +1,60 @@
+JOB 26 — Scanning Inspection Reports
+Topic: Regular Expressions (Regex)
+Aim
+To understand regular expressions for searching and validating patterns in text.
+
+Regular Expression
+A regular expression (regex) is a pattern used to find specific text or numbers inside a string.
+Python provides the re module.
+import re
+fullmatch()
+fullmatch() checks whether the complete string follows the pattern.
+import re
+
+result = re.fullmatch(r"PE-\d{4}", "PE-0137")
+
+print(result)
+If the complete string matches, a match object is returned.
+findall()
+findall() finds all matching values in a string.
+import re
+
+line = "Parts: 25.02, 24.95 and 25.10"
+
+numbers = re.findall(r"\d+\.\d+", line)
+
+print(numbers)
+Output
+['25.02', '24.95', '25.10']
+
+sub()
+sub() is used to replace matching text.
+import re
+
+line = "PE-0137   25.02"
+
+clean = re.sub(r"\s+", " ", line)
+
+print(clean)
+Output
+PE-0137 25.02
+Here \s+ means one or more whitespace characters.
+Anchors
+Consider:
+r"^PE-\d{4}$"
+It means:
+^ → string must start here
+PE- → exact text
+\d{4} → exactly four digits
+$ → string must end here
+Therefore:
+PE-0137
+matches, but:
+ABC-PE-0137-X
+does not.
+Key Points
+Regex is useful for finding patterns in text.
+re.fullmatch() checks the complete string.
+re.findall() extracts all matches.
+re.sub() replaces matching text.
+^ and $ are anchors used to control the beginning and end of a string.
