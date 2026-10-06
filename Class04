@@ -1,18 +1,55 @@
 Job Card 04: Blocks Become Text
+Job 4 introduces EduBlocks, where block-based programming concepts are connected with actual Python code. It helps students understand that the blocks used in visual programming represent real programming statements.
+The important idea is that the logic remains the same, but the way it is written changes from blocks to text.
+1. EduBlocks
+EduBlocks is a block-based programming environment that helps beginners learn Python.
+Instead of typing the complete Python syntax, the user can arrange programming blocks. The corresponding Python code can then be viewed alongside the blocks.
+This makes the transition from visual programming to text-based Python easier.
+2. print() Statement
+The print() function is used to display information on the screen.
+Example:
+print("Hello, PE!")
+Output:
+Hello, PE!
+It is commonly used to display messages, values and results.
+3. input() Function
+The input() function is used to take information from the user.
+Example:
+size = input("Size?")
+Here, the user enters a value and it is stored in the variable size.
+4. Variables
+A variable stores a value that can be used later in the program.
+Example:
+count = 0
+The value can also be changed:
+count = count + 1
+This increases the value of count by 1.
+5. if Statement
+The if statement checks whether a condition is true.
+Example:
+if dia > 25:
+    print("Oversize")
+If the diameter is greater than 25, the statement inside the if block is executed.
+6. for Loop
+A for loop is used to repeat a set of instructions a specified number of times.
+Example:
+for i in range(5):
+    print("Inspect")
+The word for starts the loop, and range(5) indicates that the loop runs five times.
+7. while Loop
+A while loop repeats instructions while a specified condition remains true.
+Example:
+while True:
+    print("Running")
+A while loop is useful when repetition depends on a condition.
+8. Indentation
+Python uses indentation to show which statements belong to a particular block.
+Example:
+if dia > 25:
+    print("Oversize")
+The indented print() statement belongs to the if statement.
+Python also uses a colon (:) after statements such as if, for, and while to indicate the beginning of a block.
 
-Topic: Transitioning from Block-Based Logic (EduBlocks) to Text-Based Python.  
-
-Core Concept: Every visual block directly translates to a specific line of Python code.  
-
-Block-to-Python Syntax Mapping
-
-Scratch / EduBlock Logic.                     Python Syntax Equivalent
-
-Set initial variable (set [count] to 0).                count = 0
-Increment variable (change [count] by 1).               count = count + 1
-Delay / Pause (wait 1 secs).                            time.sleep(1) (requires import time)
-Display Output (say [Hello, World!]).                   print("Hello, World!")
-Fixed Count Loop (repeat (10)).                         for i in range(10):
-Dynamic Input (ask [Size?] and wait).                   size = input("Size?")
-Conditional (if <dia > 25> then)v.                      if dia > 25:
-Infinite Loop (forever).                                while True:
+Overall learning 
+Job 4 explains that block programming and Python use the same basic programming logic. 
+EduBlocks makes programming easier to understand visually, while Python expresses the same logic using text and syntax.
