@@ -1,0 +1,45 @@
+JOB 24 — Shop-Floor Robustness
+
+Topic: Custom Exceptions, raise, continue and Error Handling
+1. Aim
+To learn how to create custom exceptions and decide whether a program should continue or stop.
+2. Custom Exception
+A custom exception is an exception created by the programmer for a specific problem.
+Example
+class SpecViolation(ValueError):
+    """A reading outside the drawing's tolerance."""
+    pass
+Here, SpecViolation is a special type of ValueError.
+3. Using raise
+The raise statement is used to generate an exception manually.
+def check(dia, lower=24.95, upper=25.05):
+
+    if not isinstance(dia, (int, float)):
+        raise TypeError("Diameter must be a number")
+
+    if not lower <= dia <= upper:
+        raise SpecViolation(
+            f"{dia} outside {lower}-{upper}"
+        )
+
+    return "ACCEPT"
+Example
+try:
+    check(25.40)
+except SpecViolation as e:
+    print("Quarantine:", e)
+Output
+Quarantine: 25.4 outside 24.95-25.05
+4. Log and Continue
+If one bad record should not stop the complete program:
+for line in log:
+    try:
+        process(line)
+    except (ValueError, IndexError) as e:
+        rejects.append((line, e))
+        continue
+continue skips the current iteration and moves to the next record.
+5. Stop the Program
+Sometimes the complete data is unreliable. In that situation, the program may raise an error instead of continuing.
+Key Point
+A good program does not simply catch every error. It decides which errors can be recovered from and which errors should stop the process.
