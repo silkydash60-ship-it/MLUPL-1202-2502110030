@@ -1,0 +1,80 @@
+Job 27 – Read a Production Log
+Title
+Read a Production Log using File Handling
+Aim
+To learn how to read a production log file in Python and understand different file modes such as r, w, a, and x.
+1. Introduction
+A file is used to store data permanently. In production engineering, files can store production records, machine readings, inspection data, and work logs.
+Python provides the open() function to work with files.
+Syntax
+open("filename", "mode")
+The with open() statement is preferred because it automatically closes the file after the work is completed.
+2. Reading a Production Log
+A production log may contain records like:
+P01,25.5,A
+P02,30.2,B
+P03,28.7,A
+Program
+with open("production_log.txt", "r") as f:
+    for line in f:
+        line = line.strip()
+
+        if not line:
+            continue
+
+        code, dia, shift = line.split(",")
+
+        print(code.strip(), float(dia))
+Explanation
+open() opens the file.
+"r" means read mode.
+with automatically closes the file.
+for line in f reads the file one line at a time.
+strip() removes extra spaces and newline characters.
+continue skips blank lines.
+split(",") separates the values.
+float(dia) converts the diameter into a decimal number.
+3. Three Ways to Read a File
+for line in f
+Reads the file one line at a time.
+for line in f:
+    print(line)
+Best for: Large files.
+readlines()
+Reads all lines and stores them in a list.
+lines = f.readlines()
+print(lines)
+Best for: Small files.
+read()
+Reads the complete file as one string.
+data = f.read()
+print(data)
+Best for: Reading the complete contents at once.
+Four File Modes
+Python provides four main file modes for handling files. The r (read) mode is used to read data from an existing file. 
+The w (write) mode is used to write new data, but it clears the old content of the file when it is opened. 
+The a (append) mode keeps the existing content and adds new data at the end of the file. 
+The x (create) mode is used to create a new file and gives an error if the file already exists.
+Examples
+Read:
+open("log.txt", "r")
+Write:
+open("log.txt", "w")
+Append:
+open("log.txt", "a")
+Create:
+open("log.txt", "x")
+5. Important Rule
+The w mode is dangerous for existing files because it clears the file as soon as the file is opened.
+For example:
+with open("log.txt", "w") as f:
+    f.write("New Record")
+The previous data will be removed.
+If we want to add a new record without removing old records, use a mode:
+with open("log.txt", "a") as f:
+    f.write("P04,32.5,B\n")
+6. Output
+For the given production log, the program displays values such as:
+P01 25.5
+P02 30.2
+P03 28.7
